@@ -1,0 +1,25 @@
+{
+  "name": "multistage-demo-node",
+  "version": "1.0.0",
+  "description": "A demo project to show docker multistage config",
+  "main": "index.js",
+  "scripts": {
+    "build": "uglifyjs --compress --mangle --output index.build.min.js -- index.js",
+    "prestart": "npm run build",
+    "start": "node index.build.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasondiazg/docker-multistage.git"
+  },
+  "author": "@jasondiazg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasondiazg/docker-multistage/issues"
+  },
+  "homepage": "https://github.com/jasondiazg/docker-multistage#readme",
+  "devDependencies": {
+    "uglify-js": "3.15.3"
+  }
+}
